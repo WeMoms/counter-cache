@@ -3,7 +3,7 @@ require 'active_record'
 ActiveRecord::Migration.verbose = false
 ActiveRecord::Base.establish_connection(:adapter => 'sqlite3', :database => ':memory:')
 
-class CreateModelsForTest < ActiveRecord::Migration
+class CreateModelsForTest < ActiveRecord::Migration[5.2]
   def self.up
     create_table :users do |t|
       t.string :name
