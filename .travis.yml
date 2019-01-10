@@ -1,6 +1,8 @@
 rvm:
   - "2.1.1"
   - "2.3.0"
+  - "2.4.4"
+  - "2.5.3"
 gemfile:
   - gemfiles/activerecord_3.gemfile
   - gemfiles/activerecord_4.0.gemfile
