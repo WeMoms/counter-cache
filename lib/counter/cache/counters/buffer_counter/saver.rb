@@ -58,11 +58,15 @@ module Counter
           end
 
           def relation_object
-            @relation_object ||= constantized_relation.find_by(uuid: options.relation_id)
+            @relation_object ||= constantized_relation.find_by(relation_primary_key => options.relation_id)
+          end
+
+          def relation_primary_key
+            options.relation_primary_key || constantized_relation.primary_key
           end
 
           def constantized_relation
-            Object.const_get(options.relation_class_name)
+            @constantized_relation ||= Object.const_get(options.relation_class_name)
           end
         end
       end

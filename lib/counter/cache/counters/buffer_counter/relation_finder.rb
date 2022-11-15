@@ -13,6 +13,10 @@ module Counter
             options.relation_id || source_object.send("#{options.relation}_id")
           end
 
+          def relation_primary_key
+            options.relation_primary_key || reflection.options[:primary_key]
+          end
+
           private
 
           def polymorphic_type

@@ -21,6 +21,7 @@ module Counter
                          source_object.class.name,
                          relation_finder.relation_id,
                          relation_finder.relation_class,
+                         relation_finder.relation_primary_key,
                          counter_class_name).enqueue!(source_object)
           end
 

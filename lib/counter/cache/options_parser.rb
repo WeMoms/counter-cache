@@ -29,6 +29,10 @@ module Counter
         options[:relation_id]
       end
 
+      def relation_primary_key
+        options[:relation_primary_key]
+      end
+
       def method
         options[:method]
       end
